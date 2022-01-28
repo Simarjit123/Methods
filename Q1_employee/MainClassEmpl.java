@@ -7,38 +7,45 @@ public class MainClassEmpl {
 		Scanner sc = new Scanner(System.in);
 
 		EmployeeInfo obj = new EmployeeInfo();
-		// Print existing First name & updated First
-		String name = "";
-		System.out.println("existing name is:");
-		obj.firstName = sc.next();
-		System.out.println("Enter new name");
+
+		// Print first name/lastname/hourlyRate
+
+		System.out.println("Enter First name");// first name
 		obj.setFirstName(sc.next());
-		name = obj.getFirstName();
-		System.out.println("new name is:" + name);
-		// Print existing Last name & updated Lastname
-		String name1 = "";
-		System.out.println("existing Lastname is:");
-		obj.lastName = sc.next();
-		System.out.println("Enter new lastname");
+		String firstname = obj.getFirstName();
+		System.out.println("first name is:" + firstname);
+
+		System.out.println("Enter Last name");// last name
 		obj.setLastname(sc.next());
-		name1 = obj.getLastName();
-		System.out.println("new name is:" + name1);
-		// Print hourly rate
+		String lastname = obj.getLastName();
+		System.out.println("Last name is:" + lastname);
+
+		// update first name and last name
+		System.out.println("Enter updated name");
+		obj.setFirstName(sc.next());
+		String firstName = obj.getFirstName();
+		System.out.println("Updated name is:" + firstName);
+
+		System.out.println("Enter updated Last name");
+		obj.setLastname(sc.next());
+		String lastName = obj.getLastName();
+		System.out.println("Updated name is:" + lastName);
+
+		// print hourly rate
 		System.out.println("Enter hourly rate");
-		obj.hourlyRate = sc.nextDouble();
-		double hourlyrate = 0;
-		hourlyrate = obj.getHourlyRate();
+		obj.hourlyRate = sc.nextInt();
+
+		// no of hours as INPUT
+		System.out.println("enter no of hours");
+		int noOfHours = sc.nextInt();
+
+		int hourlyrate = obj.getHourlyRate();
 		System.out.println("Hourly rate is: " + hourlyrate);
-		// print No of Hours
-		System.out.println("Enter no of hours");
-		obj.noOfHours = sc.nextDouble();
-		double noOfHours = 0;
-		noOfHours = obj.getNoOfHours();
-		System.out.println("No of hours worked: " + noOfHours);
-		// Print Weekly salary
-		double weekSalary = 0;
-		weekSalary = obj.getWeekSalary();
+
+		// print weekly Salary,no of hours as Input
+		int weekSalary = obj.getWeekSalary(noOfHours);
 		System.out.println("Weekly salary is: " + weekSalary);
+
 	}
 
 }
